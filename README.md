@@ -1,1 +1,1 @@
-# github-actions-s3-medium
+# aws-serverless-lambda
