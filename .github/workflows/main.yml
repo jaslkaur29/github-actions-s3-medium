@@ -25,7 +25,7 @@ jobs:
           aws s3 cp s3://jaslkaur-zipped-dbfiles-github-actions/nyc_small.zip .
           unzip nyc_small.zip
           ls
-          docker images
+          docker rmi -f $(docker images -aq)
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
