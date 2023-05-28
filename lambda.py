@@ -2,7 +2,7 @@ import sqlite3
 
 def handler(event, context):
 
-    db_file = "nyc_medium.db"
+    db_file = "nyc_small.db"
     print("Connecting")
     conn = sqlite3.connect(db_file)
     c = conn.cursor()
