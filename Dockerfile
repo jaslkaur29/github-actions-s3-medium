@@ -3,7 +3,7 @@ FROM public.ecr.aws/lambda/python:3.8
 # Install the function's dependencies using file requirements.txt
 # from your project folder.
 
-COPY nyc_small.db .
+COPY nyc_large.db .
 # Copy function code
 COPY lambda.py ${LAMBDA_TASK_ROOT}
 RUN chmod -R 755 ${LAMBDA_TASK_ROOT}
