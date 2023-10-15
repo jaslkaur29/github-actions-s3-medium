@@ -6,7 +6,7 @@ def handler(event, context):
     print("Connecting")
     conn = sqlite3.connect(db_file)
     c = conn.cursor()
-    ans = c.execute("SELECT * FROM nyc_speed LIMIT 5;")
+    ans = c.execute("SELECT count(*) FROM nyc_speed;")
     ans = c.fetchall()
     conn.commit()
     conn.close()
