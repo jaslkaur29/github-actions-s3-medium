@@ -24,7 +24,7 @@ jobs:
         run: |
           # aws s3 cp s3://jaslkaur-zipped-dbfiles-github-actions/nyc_large.zip .
           # unzip nyc_large.zip
-          aws s3 cp s3://workload-for-plain-lambda/nyc_large .
+          aws s3 cp s3://workload-for-plain-lambda/nyc_large.db .
           ls
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
